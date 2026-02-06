@@ -8,10 +8,15 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    private KeyboardState _lastKeyboardState;
+    
+    
 //test
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
+        _graphics.PreferredBackBufferHeight = 500;
+        _graphics.PreferredBackBufferWidth = 500;
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
@@ -35,8 +40,21 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
             Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
+        
+        KeyboardState keyboardState = Keyboard.GetState();
+        
+        if (keyboardState.IsKeyDown(Keys.Enter))
+        {
+            _lastKeyboardState = keyboardState;
+            
 
-        // TODO: Add your update logic here
+        }
+
+        if (_lastKeyboardState.IsKeyDown(Keys.Enter) && keyboardState.IsKeyUp(Keys.Enter))
+        {
+           // TODO: Change display 
+
+        }
 
         base.Update(gameTime);
     }
