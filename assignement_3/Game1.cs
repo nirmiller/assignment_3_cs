@@ -9,6 +9,8 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     private KeyboardState _lastKeyboardState;
+
+    private bool displayingFrequency;
     
     
 //test
@@ -19,6 +21,7 @@ public class Game1 : Game
         _graphics.PreferredBackBufferWidth = 500;
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        displayingFrequency = false;
     }
 
     protected override void Initialize()
@@ -52,7 +55,14 @@ public class Game1 : Game
 
         if (_lastKeyboardState.IsKeyDown(Keys.Enter) && keyboardState.IsKeyUp(Keys.Enter))
         {
-           // TODO: Change display 
+            if (displayingFrequency)
+            {
+                displayingFrequency = false;
+            }
+            else
+            {
+                displayingFrequency = true;
+            }
 
         }
 
@@ -62,9 +72,15 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
-        // TODO: Add your drawing code here
-
+        _spriteBatch.Begin();
+        if (displayingFrequency)
+        {
+            // Todo add displayFrequencyClass.Display(spriteBatch)
+        }
+        else
+        {
+            // Todo add uniqueWords.Display(spriteBatch)
+        }
         base.Draw(gameTime);
     }
 }
