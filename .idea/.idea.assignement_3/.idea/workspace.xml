@@ -8,10 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b81a04f-2dcc-4a3a-b85b-8d0530a6c7fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assignement_3/DisplayWordFrequency.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.assignement_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignement_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignement_3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/assignement_3/Game1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignement_3/assignement_3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/assignement_3/assignement_3.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +128,7 @@
       <workItem from="1770411755785" duration="13000" />
       <workItem from="1770486410782" duration="73000" />
       <workItem from="1770510655031" duration="1893000" />
-      <workItem from="1770525065918" duration="3416000" />
+      <workItem from="1770525065918" duration="4054000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
