@@ -9,6 +9,7 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     private KeyboardState _lastKeyboardState;
+    private DisplayWordFrequency _wordFrequencyDisplay;
 
     private SpriteFont _font;
 
@@ -33,6 +34,7 @@ public class Game1 : Game
 
         base.Initialize();
     }
+    
 
     protected override void LoadContent()
     {
@@ -45,6 +47,11 @@ public class Game1 : Game
             _font,
             Color.White, Color.Yellow, Color.LightGreen
         );
+        
+        _wordFrequencyDisplay = new DisplayWordFrequency();
+        _wordFrequencyDisplay.LoadContent(GraphicsDevice, _font);
+        
+        _lastKeyboardState = Keyboard.GetState();
 
         // TODO: use this.Content to load your game content here
     }
@@ -54,7 +61,12 @@ public class Game1 : Game
 
         if (_lastKeyboardState.IsKeyUp(Keys.Enter) && keyboardState.IsKeyDown(Keys.Enter))
         {
-            displayingFrequency = !displayingFrequency; 
+            displayingFrequency = !displayingFrequency;
+        }
+
+        if (displayingFrequency)
+        {
+            _wordFrequencyDisplay.HandleInput(keyboardState);
         }
 
         _lastKeyboardState = keyboardState;
@@ -64,7 +76,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
 
         _spriteBatch.Begin();
 
@@ -75,8 +87,10 @@ public class Game1 : Game
         else
         {
             //word frequency add functionality 
+            _wordFrequencyDisplay.Draw(_spriteBatch);
         }
         
+
 
         _spriteBatch.End();
 

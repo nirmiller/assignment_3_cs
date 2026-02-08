@@ -8,9 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b81a04f-2dcc-4a3a-b85b-8d0530a6c7fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assignement_3/DisplayWordFrequency.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.assignement_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignement_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignement_3/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/assignement_3/Content/Content.mgcb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignement_3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/assignement_3/Game1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignement_3/assignement_3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/assignement_3/assignement_3.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,35 +29,42 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN"
+      &quot;state&quot;: &quot;OPEN&quot;
     }
   ],
-  "lastFilter": {
-    "state": "OPEN"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/nirmiller/assignment_3_cs.git&quot;,
-    &quot;accountId&quot;: &quot;5fd8f298-6e49-4105-af35-00b7e36d6581&quot;
-  },
-  &quot;recentNewPullRequestHead&quot;: {
-    &quot;server&quot;: {
-      &quot;useHttp&quot;: false,
-      &quot;host&quot;: &quot;github.com&quot;,
-      &quot;port&quot;: null,
-      &quot;suffix&quot;: null
-    },
-    &quot;owner&quot;: &quot;nirmiller&quot;,
-    &quot;repository&quot;: &quot;assignment_3_cs&quot;
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nirmiller/assignment_3_cs.git",
+    "accountId": "a5cbeb8f-9ea3-46f0-ac12-cfa0ce8fb582"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "nirmiller",
+    "repository": "assignment_3_cs"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/assignement_3/DisplayWordFrequency.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -70,11 +78,12 @@
   "keyToString": {
     ".NET Project.assignement_3.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,6 +131,7 @@
       <workItem from="1770411755785" duration="13000" />
       <workItem from="1770486410782" duration="73000" />
       <workItem from="1770510655031" duration="1893000" />
+      <workItem from="1770525065918" duration="3416000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
