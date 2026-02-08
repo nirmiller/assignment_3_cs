@@ -10,15 +10,18 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
     private KeyboardState _lastKeyboardState;
 
+    private SpriteFont _font;
+
     private bool displayingFrequency;
+    
+    DisplayUniqueWords _uniqueWords;
     
     
 //test
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
-        _graphics.PreferredBackBufferHeight = 500;
-        _graphics.PreferredBackBufferWidth = 500;
+
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
         displayingFrequency = false;
@@ -34,37 +37,27 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+        _font = Content.Load<SpriteFont>("font/Charter");
+        _uniqueWords = new DisplayUniqueWords("Content/text/uniquewords.txt");
+        _uniqueWords.CallNewWords(
+            GraphicsDevice.Viewport.Width,
+            GraphicsDevice.Viewport.Height,
+            _font,
+            Color.White, Color.Yellow, Color.LightGreen
+        );
 
         // TODO: use this.Content to load your game content here
     }
-
     protected override void Update(GameTime gameTime)
     {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-            Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
-        
-        KeyboardState keyboardState = Keyboard.GetState();
-        
-        if (keyboardState.IsKeyDown(Keys.Enter))
-        {
-            _lastKeyboardState = keyboardState;
-            
+        var keyboardState = Keyboard.GetState();
 
+        if (_lastKeyboardState.IsKeyUp(Keys.Enter) && keyboardState.IsKeyDown(Keys.Enter))
+        {
+            displayingFrequency = !displayingFrequency; 
         }
 
-        if (_lastKeyboardState.IsKeyDown(Keys.Enter) && keyboardState.IsKeyUp(Keys.Enter))
-        {
-            if (displayingFrequency)
-            {
-                displayingFrequency = false;
-            }
-            else
-            {
-                displayingFrequency = true;
-            }
-
-        }
+        _lastKeyboardState = keyboardState;
 
         base.Update(gameTime);
     }
@@ -72,15 +65,22 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
+
         _spriteBatch.Begin();
-        if (displayingFrequency)
+
+        if (!displayingFrequency)
         {
-            // Todo add displayFrequencyClass.Display(spriteBatch)
+            _uniqueWords.Draw(_spriteBatch, _font); // show words
         }
         else
         {
-            // Todo add uniqueWords.Display(spriteBatch)
+            //word frequency add functionality 
         }
+        
+
+        _spriteBatch.End();
+
         base.Draw(gameTime);
     }
+
 }
